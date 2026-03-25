@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Escape Room: Voting Day TC2" startnode="17" creator="Twine" creator-version="2.11.1" format="SugarCube" format-version="2.37.3" ifid="56834434-d52c-4c62-8f70-d0c74d7e1803" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body[data-tags] {
+	<tw-storydata name="Escape Room: Voting Day TC2" startnode="19" creator="Twine" creator-version="2.11.1" format="SugarCube" format-version="2.37.3" ifid="56834434-d52c-4c62-8f70-d0c74d7e1803" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body[data-tags] {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -321,34 +321,35 @@ body::before {
 
 
 .choice-menu-d {
-  margin-top: 20px;
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .choice-menu-d a {
   display: inline-block;
-  background-color: #ad6d37;
-  color: white;
-  padding: 6px 12px;
-  margin: 6px 0;
-  border: 2px solid #f3ac70;
-  border-right-color: #7a502c;
-  border-bottom-color: #7a502c;
-  border-radius: 0px;
+  padding: 8px 14px;
+  font-family: monospace;
+  font-weight: bold;
+  color: white !important;
   text-decoration: none;
+  border: 2px solid #5a3c1c;
+  border-radius: 4px;
+  background-image: url("https://i.imgur.com/mgtQQi2.jpeg");
+  background-size: cover;
+  background-repeat: repeat;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+  cursor: pointer;
   width: fit-content;
 }
 
 .choice-menu-d a:hover {
-  background-color: #b47846;
+  filter: brightness(1.1);
 }
 
 .choice-menu-d a:active {
-  border: 2px solid #7a502c;
-  border-right-color: #f3ac70;
-  border-bottom-color: #f3ac70;
-  background-color: #cf8e57;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.5);
 }
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Room1" color="green"></tw-tag><tw-tag name="Drawer" color="blue"></tw-tag><tw-tag name="Background-Overlay" color="red"></tw-tag><tw-tag name="Pencil-Holder" color="green"></tw-tag><tw-tag name="Window" color="purple"></tw-tag><tw-tag name="Basement-Room" color="red"></tw-tag><tw-tag name="Computer" color="green"></tw-tag><tw-tag name="Classroom" color="blue"></tw-tag><tw-tag name="Door" color="orange"></tw-tag><tw-tag name="Safe" color="orange"></tw-tag><tw-tag name="Exit" color="yellow"></tw-tag><tw-passagedata pid="1" name="Introduction 3" tags="Basement-Room" position="625,300" size="100,100">&lt;&lt;set $key to 0&gt;&gt;\
 &lt;&lt;set $paperPencilHolder to 0&gt;&gt;\
@@ -827,7 +828,7 @@ This drawer has a code lock.
 &lt;&lt;/listbox&gt;&gt;\
 
 &lt;span class=&quot;choice-button&quot;&gt;&lt;&lt;link &quot;Unlock&quot;&gt;&gt;
-	&lt;&lt;if $A == 💚 &amp;&amp; $B == ⭐ &amp;&amp; $C == 🟪&gt;&gt;
+	&lt;&lt;if $A == &quot;💚&quot; &amp;&amp; $B == &quot;⭐&quot; &amp;&amp; $C == &quot;🟪&quot;&gt;&gt;
     	&lt;&lt;goto &quot;Right Drawer 2&quot;&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/span&gt;
@@ -836,9 +837,7 @@ This drawer has a code lock.
 [[Left drawer-&gt;Left Drawer]]
 &lt;/div&gt;
 
-&lt;&lt;include &quot;Locations&quot;&gt;&gt;
-
-[[Right Drawer 2]] REMOVE</tw-passagedata><tw-passagedata pid="22" name="Right Drawer 2" tags="Drawer" position="1125,50" size="100,100">&lt;&lt;set $currentlocation to &quot;Desk&quot;&gt;&gt;\
+&lt;&lt;include &quot;Locations&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Right Drawer 2" tags="Drawer" position="1125,50" size="100,100">&lt;&lt;set $currentlocation to &quot;Desk&quot;&gt;&gt;\
 &lt;&lt;if $exitkey is 0&gt;&gt;\
 We had the right code!&lt;&lt;timed 1s&gt;&gt;&lt;span class=&quot;fade-in&quot;&gt; ...but there just seems to be a lot of documents in here.&lt;/span&gt;&lt;&lt;/timed&gt;&gt;
 
